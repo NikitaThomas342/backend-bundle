@@ -1,0 +1,22 @@
+{
+    "name": "module-a",
+    "version": "1.0.0",
+    "description": "create a module to use",
+    "main": "./server.js",
+    "directories": {
+        "lib": "lib",
+        "test": "test"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.3",
+        "strapi": "^3.6.8",
+        "yarn": "^1.22.11"
+    }
+}

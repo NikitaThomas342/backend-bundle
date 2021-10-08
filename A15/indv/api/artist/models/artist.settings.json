@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artist",
+  "info": {
+    "name": "artist",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "artist_name": {
+      "type": "string"
+    },
+    "artist_detail": {
+      "type": "text"
+    },
+    "artist_status": {
+      "type": "string"
+    },
+    "band": {
+      "via": "artists",
+      "model": "band"
+    },
+    "band_id": {
+      "type": "integer"
+    },
+    "song": {
+      "via": "artist",
+      "model": "songs"
+    }
+  }
+}

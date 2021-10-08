@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "song",
+  "info": {
+    "name": "song",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "song_name": {
+      "type": "string"
+    },
+    "song_type": {
+      "type": "string"
+    },
+    "band_id": {
+      "type": "integer"
+    },
+    "artist_id": {
+      "type": "integer"
+    },
+    "published": {
+      "type": "date"
+    },
+    "album_id": {
+      "type": "integer"
+    },
+    "song_detail": {
+      "type": "text"
+    },
+    "song_status": {
+      "type": "string"
+    },
+    "song_src": {
+      "type": "string"
+    },
+    "song_thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "song_hits": {
+      "type": "biginteger"
+    },
+    "album": {
+      "via": "songs",
+      "model": "album"
+    },
+    "artist": {
+      "via": "song",
+      "model": "artist"
+    }
+  }
+}

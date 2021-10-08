@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "albums",
+  "info": {
+    "name": "album",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "album_name": {
+      "type": "string"
+    },
+    "album_type": {
+      "type": "string"
+    },
+    "band_id": {
+      "type": "integer"
+    },
+    "album_status": {
+      "type": "string"
+    },
+    "album_detail": {
+      "type": "text"
+    },
+    "band": {
+      "via": "albums",
+      "model": "band"
+    },
+    "songs": {
+      "via": "album",
+      "collection": "songs"
+    }
+  }
+}
